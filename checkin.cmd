@@ -1,3 +1,3 @@
 git add -A 
-git commit -m "Updated command"
+git commit -m "added example config file"
 git push
