@@ -1,3 +1,3 @@
 git add -A 
-git commit -m "removed update no need for openssh"
+git commit -m "Updated command"
 git push
