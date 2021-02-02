@@ -18,7 +18,11 @@ ENV deploy=c1f18aefcb3d1074d5166520dbf4ac8d2e85bf41 \
     # GIT_TRACE_PACKET=1 \
     # GIT_TRACE=1 \
     # GIT_CURL_VERBOSE=1
-
+RUN apt-get update && apt-get -y upgrade &&\
+    apt-get install -y unzip wget git build-essential &&\
+    apt-get -y autoclean &&\
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    
 RUN git config --global url.git@github.com:.insteadOf https://github.com/ &&\
     git config --global url.git@gitlab.com:.insteadOf https://gitlab.com/ &&\
     git config --global url.git@gitea.com:.insteadOf https://gitea.com/ &&\
